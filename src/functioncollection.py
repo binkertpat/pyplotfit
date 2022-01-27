@@ -17,13 +17,14 @@ def linear(x, a, b):
     return a * x + b
 
 
-def getdoublegaussianwithlinearundergroundlabel():
+def doublegaussianwithlinearundergroundlabel():
     return "Gauß-Fit: $f(x) = c_1 e^{(-(x-\\mu_1)^2/(2\\sigma_1^2))} + c_2 e^{(-(x-\\mu_2)^2/(2\\sigma_2^2))} + a*x+b$"
 
 
-def getlinearlabel():
+def linearlabel():
     return "linearer Fit: $f(x) = a*x+b$"
 
-def getgaussianwithlinearundergroundlabel():
+
+def gaussianwithlinearundergroundlabel():
     return "Gauß-Fit: $f(x) = c_1 e^{(-(x-\\mu_1)^2/(2\\sigma_1^2))} + a*x+b$"
 

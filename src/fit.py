@@ -1,7 +1,10 @@
+import math
+
 import numpy as np
 from src import functioncollection
 import scipy.optimize as sp
 import inspect
+import copy
 
 
 class Fit:
@@ -9,21 +12,12 @@ class Fit:
         self.xDatas = xDatas
         self.yDatas = yDatas
 
-        match fit:
-            case 0:
-                self.listAvaiableFits()
-            case 1:
-                self.fit = functioncollection.doublegaussianwithlinearunderground
-                self.fitlabel = functioncollection.getdoublegaussianwithlinearundergroundlabel()
-                print("Try to fit the given area with an double gaussian function.\n")
-            case 2:
-                self.fit = functioncollection.gaussianwithlinearunderground
-                self.fitlabel = functioncollection.getdoublegaussianwithlinearundergroundlabel()
-                print("Try to fit the given area with an gaussian function.\n")
-            case 3:
-                self.fit = functioncollection.linear
-                self.fitlabel = functioncollection.getlinearlabel()
-                print("Try to fit the given area with an linear function.\n")
+        self.avaiableFits = []
+        self.listAvaiableFits()
+
+        if fit != 0:
+            self.fit = eval("functioncollection." + str(self.getAvaiableFits()[fit-1]))
+            self.fitlabel = eval("functioncollection." + str(self.getAvaiableFits()[fit-1]) + "label")()
 
         if lowerLimit is None:
             self.lowerLimit = np.min(self.xDatas)
@@ -76,11 +70,20 @@ class Fit:
     def getInitialGuesses(self):
         return self.initialGuesses
 
+    def getAvaiableFits(self):
+        return self.avaiableFits
+
     def listAvaiableFits(self):
-        print("\nList of all key numbers of available fits:")
+        print("List of all key numbers of available fits:")
         allFunctions = inspect.getmembers(functioncollection, inspect.isfunction)
-        for i in range(0, int(len(allFunctions)/2)):
-            print(str(i+1)+":", allFunctions[i][0])
+        outputIndex = 0
+        for i in range(0, len(allFunctions)):
+            if allFunctions[i][0].__contains__("label"):
+                continue
+            print(str(outputIndex+1)+":", allFunctions[i][0])
+            self.avaiableFits.append(allFunctions[i][0])
+            outputIndex = outputIndex + 1
+        print(" ")
 
     def calculatefit(self):
         popt, cov = sp.curve_fit(self.getFit(), self.getXdatas(), self.getYdatas(), p0=self.getInitialGuesses())
