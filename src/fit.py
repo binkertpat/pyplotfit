@@ -1,7 +1,6 @@
 import numpy as np
-import functioncollection
+from src import functioncollection
 import scipy.optimize as sp
-import matplotlib.pyplot as mpl
 import inspect
 
 

@@ -2,19 +2,20 @@ import math
 
 import numpy as np
 
+
 def readfile(filename):
     """read file and return a directory with time, channels and counts"""
     channel = []
     counts = []
     counter = 0
-    with open(filename, "r") as file:
+    with open("../datas/" + filename, "r") as file:
         for i, line in enumerate(file):
             if 12 <= i <= 8202:
                 channel.append(counter)
                 counter = counter + 1
                 counts.append(int(line.strip()))
             elif i == 9:
-                measuretime = (int(line.split()[0])+int(line.split()[1]))/2
+                measuretime = (int(line.split()[0]) + int(line.split()[1])) / 2
 
     dataset = {
         'name': filename.split('.')[0],
@@ -56,6 +57,7 @@ def calibrate_dataSets(dataset, params):
         newScale.append(params[0] * el + params[1])
     return newScale
 
+
 def substracttwodatasets_scaledtomeasuretimeofdataset1(dataset1, dataset2):
     """
     input two datasets, get scaled and substracted dataset with measuretime from dataset1
@@ -70,8 +72,9 @@ def substracttwodatasets_scaledtomeasuretimeofdataset1(dataset1, dataset2):
     scalingFactor = dataset1["time"] / dataset2["time"]
     scaledSubstractedDatas = []
     for i in range(0, len(dataset1["channel"])):
-        scaledSubstractedDatas.append(max(dataset1['counts'][i] - dataset2['counts'][i]*scalingFactor, 0))
-    return {'name': dataset1["name"], 'time': dataset1["time"], 'channel': dataset1["channel"], 'counts': scaledSubstractedDatas}
+        scaledSubstractedDatas.append(max(dataset1['counts'][i] - dataset2['counts'][i] * scalingFactor, 0))
+    return {'name': dataset1["name"], 'time': dataset1["time"], 'channel': dataset1["channel"],
+            'counts': scaledSubstractedDatas}
 
 
 def fromchannelstonewscale(value, params):
