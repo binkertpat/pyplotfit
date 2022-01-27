@@ -8,6 +8,7 @@
 - inspect  
   
 ## HOW-TO
+### read datas
  First of all reading your Dataset. According to our experiment, we designed a method for reading the output file of an Gamma-Ray-Detektor. Feel free to add or change other reading functions in <code> datasetfunctions.py</code>.
 ```python
 dataset = datasetfunctions.readfile("EU152.Spe")
@@ -21,6 +22,7 @@ dataset = {
 	  'counts': counts  
 }
 ```
+### realize plot
 In the next step you are able to create an <code>Plot()</code>-, <code>Scatter()</code>- or <code>Errorbar()</code>-Object. 
 The only required parameters are the datas for x and y. For example:
 ```python
@@ -73,6 +75,9 @@ Errorbar(
 	fmt="x": str
 )
 ```
+### add fits
+
+
 
 ## open TODOs  
 - Update functioncollection for more fit functions  
