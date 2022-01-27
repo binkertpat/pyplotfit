@@ -27,7 +27,9 @@ class Plot:
     extraLegendComponent: str
         set an extra entry to the legend
     """
-    def __init__(self, xDatas, yDatas, dataLabel=None, axisLabel=None, xAxis=None, lineType="--", lineColor="blue", grid=True, extraLegendComponent=None):
+
+    def __init__(self, xDatas, yDatas, dataLabel=None, axisLabel=None, xAxis=None, lineType="--", lineColor="blue",
+                 grid=True, extraLegendComponent=None):
 
         self.fity = None
         self.fitx = None
@@ -56,83 +58,109 @@ class Plot:
         self.extraLegendComponent = extraLegendComponent
 
     def setxDatas(self, xDatas):
+        """set x-axis-array"""
         self.xDatas = xDatas
 
     def getxDatas(self):
+        """get x-axis-array"""
         return self.xDatas
 
     def setyDatas(self, yDatas):
+        """set y-axis-array"""
         self.yDatas = yDatas
 
     def getyDatas(self):
+        """get y-axis-array"""
         return self.yDatas
 
     def setDataLabel(self, dataLabel):
+        """set label for legend"""
         self.dataLabel = dataLabel
 
     def getDataLabel(self):
+        """get label for legend"""
         return self.dataLabel
 
     def setAxisLabel(self, axisLabel):
+        """set x-y-axis label"""
         self.axisLabel = axisLabel
 
     def getAxisLabel(self):
+        """get x-y-axis label"""
         return self.axisLabel
 
     def setxAxis(self, xAxis):
+        """set x-axis dimension"""
         self.xaxis = {"min": xAxis[0], "max": xAxis[1]}
 
     def getxAxis(self):
+        """get x-axis dimension"""
         return self.xaxis
 
     def setyAxis(self, yAxis):
+        """set y-axis dimension"""
         self.yAxis = yAxis
 
     def getyAxis(self):
+        """get y-axis dimension"""
         return self.yAxis
 
     def setLineType(self, lineType):
+        """set line type"""
         self.lineType = lineType
 
     def getLineType(self):
+        """get line type"""
         return self.lineType
 
     def setLineColor(self, lineColor):
+        """set color line"""
         self.lineColor = lineColor
 
     def getLineColor(self):
+        """get color line"""
         return self.lineColor
 
     def setGrid(self, grid):
+        """set grid setting to true/false"""
         self.grid = grid
 
     def getGrid(self):
+        """get grid setting"""
         return self.grid
 
     def setExtraLegendComponent(self, extraLegendComponent):
+        """set an extra legend component"""
         self.extraLegendComponent = extraLegendComponent
 
     def getExtraLegendComponent(self):
+        """get extra legend component"""
         return self.extraLegendComponent
 
     def calculateYAxis(self):
+        """scale y-axis according to max y-datas"""
         self.yAxis["min"] = np.min(self.getyDatas()[self.getxAxis()["min"]:self.getxAxis()["max"]])
-        self.yAxis["max"] = np.max(self.getyDatas()[self.getxAxis()["min"]:self.getxAxis()["max"]]) + (1.2*math.sqrt(np.max(self.getyDatas()[self.getxAxis()["min"]:self.getxAxis()["max"]])))
+        self.yAxis["max"] = np.max(self.getyDatas()[self.getxAxis()["min"]:self.getxAxis()["max"]]) + (
+                    1.2 * math.sqrt(np.max(self.getyDatas()[self.getxAxis()["min"]:self.getxAxis()["max"]])))
 
     def generateAxisDefinition(self):
+        """generate new axis-definition"""
         self.calculateYAxis()
         return [self.getxAxis()["min"], self.getxAxis()["max"], self.getyAxis()["min"], self.getyAxis()["max"]]
 
     def plotFit(self, fitx, fity, color="red", label="Fit"):
+        """function called by fit-object, show fit in plot"""
         self.fitx = fitx
         self.fity = fity
         mpl.plot(fitx, fity, '--', color=color, label=label)
 
     def definePlot(self):
+        """define style of plot"""
         mpl.plot(self.getxDatas(), self.getyDatas(), self.getLineType(), color=self.getLineColor(),
                  label=self.getDataLabel())
 
     def showPlot(self):
+        """define all plot settings and show the plot"""
         self.definePlot()
 
         mpl.axis(self.generateAxisDefinition())
@@ -180,7 +208,7 @@ class Scatter(Plot):
 
     def definePlot(self):
         mpl.scatter(self.getxDatas(), self.getyDatas(), marker=self.getMarker(), edgecolors=self.getEdgecolor(),
-                 linewidths=self.getLinewidths(), label=self.getDataLabel())
+                    linewidths=self.getLinewidths(), label=self.getDataLabel())
 
 
 class Errorbar(Plot):
@@ -218,8 +246,10 @@ class Errorbar(Plot):
     fmt: str
         key for design of measurpoints
     """
+
     def __init__(self, xDatas, yDatas, dataLabel=None, axisLabel=None, xAxis=None, lineType="--", lineColor="blue",
-                 grid=True, extraLegendComponent=None, yerr=None, xerr=None, elinewidth=1.5, markersize=5, ecolor="lightgray", fmt="x"):
+                 grid=True, extraLegendComponent=None, yerr=None, xerr=None, elinewidth=1.5, markersize=5,
+                 ecolor="lightgray", fmt="x"):
         super().__init__(xDatas, yDatas, dataLabel, axisLabel, xAxis, lineType, lineColor, grid, extraLegendComponent)
         self.yerr = yerr
         self.xerr = xerr
@@ -265,7 +295,7 @@ class Errorbar(Plot):
         return self.fmt
 
     def definePlot(self):
-        mpl.errorbar(self.getxDatas(), self.getyDatas(), label=self.getDataLabel(), yerr=self.getYerr(), xerr=self.getXerr(),
-                     fmt=self.getFmt(), elinewidth=self.getElinewidth(), markersize=self.getMarkersize(), ecolor=self.getEcolor())
-
-
+        mpl.errorbar(self.getxDatas(), self.getyDatas(), label=self.getDataLabel(), yerr=self.getYerr(),
+                     xerr=self.getXerr(),
+                     fmt=self.getFmt(), elinewidth=self.getElinewidth(), markersize=self.getMarkersize(),
+                     ecolor=self.getEcolor())
