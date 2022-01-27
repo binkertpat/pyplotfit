@@ -5,6 +5,8 @@ if __name__ == '__main__':
 
     X, Y = dataset["channel"], dataset["counts"]
 
+    print(datasetfunctions.getArrayIndexForNearestValue(X, 300))
+
     Y = datasetfunctions.countingrate(Y, dataset["time"])
     yerr = datasetfunctions.calculatestatisticalerrors(Y)
 
@@ -12,5 +14,3 @@ if __name__ == '__main__':
     doubleGaussFit = fit.Fit(plot, X, Y, 2, initialGuesses=[0.1, 302, 5, 0.1, 0.1], lowerLimit=260, upperLimit=340)
 
     plot.showPlot()
-
-

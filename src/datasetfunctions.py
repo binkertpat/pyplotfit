@@ -85,3 +85,9 @@ def fromchannelstonewscale(value, params):
 def fromnewscaletochannels(value, params):
     """change scale from energy to channel, with linear expression and them parameters"""
     return (value - params[1]) / params[0]
+
+
+def getArrayIndexForNearestValue(array, value):
+    arr = np.array(array)
+    return np.abs(arr - value).argmin()
+
