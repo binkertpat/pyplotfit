@@ -20,7 +20,7 @@
 
 
 # pyplotfit  
-## dependencies  
+## dependencies / used modules 
 - matplotlib.pyplot   
 - matplotlib.patches  
 - numpy  
@@ -28,16 +28,7 @@
 - scipy  
 - inspect  
   
-## workflow  
-1. read dataset, use datasetfunctions  
-2. create new plot-object (line-, scatter or errorbarplot)  
-3. create new fit-object - let fit param on default to print all avaiable fits  
-4. get your fit-key-number from the terminal and set the param  
-  
-## open TODOs  
-- Update functioncollection for more fit functions  
-- function for find index in sorted array for nearest given value  
-  
+## HOW-TO
  First of all reading your Dataset. According to our experiment, we designed a method for reading the output file of an Gamma-Ray-Detektor. Feel free to add or change other reading functions in <code> datasetfunctions.py</code>.
 ```python
 dataset = datasetfunctions.readfile("EU152.Spe")
@@ -103,3 +94,7 @@ Errorbar(
 	fmt="x": str
 )
 ```
+
+## open TODOs  
+- Update functioncollection for more fit functions  
+- function for find index in sorted array for nearest given value  
