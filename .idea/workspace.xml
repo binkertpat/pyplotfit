@@ -4,10 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c24c5b7d-d244-47c6-9972-065e59aa5df4" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/datasetfunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/datasetfunctions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fit.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/startplotandfit.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/startplotandfit.py" afterDir="false" />
+    <list default="true" id="c24c5b7d-d244-47c6-9972-065e59aa5df4" name="Changes" comment="some documentary stuff">
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -125,7 +123,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643303942409</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="some documentary stuff">
+      <created>1643307946920</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1643307946920</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -145,6 +150,7 @@
     <MESSAGE value="reorganize project structure" />
     <MESSAGE value="todos" />
     <MESSAGE value="update function collection selection" />
-    <option name="LAST_COMMIT_MESSAGE" value="update function collection selection" />
+    <MESSAGE value="some documentary stuff" />
+    <option name="LAST_COMMIT_MESSAGE" value="some documentary stuff" />
   </component>
 </project>

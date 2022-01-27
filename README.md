@@ -16,3 +16,5 @@
 ## open TODOs
 - Update functioncollection for more fit functions
 - function for find index in sorted array for nearest given value
+
+`python = dataset = datasetfunctions.readfile("EU152.Spe")`
