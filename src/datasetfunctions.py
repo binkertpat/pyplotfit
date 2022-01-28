@@ -52,7 +52,7 @@ def countingrate(dataset, time):
 def calibrate_dataSets(dataset, params):
     """calculate new y with an linear expression"""
     newScale = []
-    for el in dataset["channel"]:
+    for el in dataset:
         newScale.append(params[0] * el + params[1])
     return newScale
 

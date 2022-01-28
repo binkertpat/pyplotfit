@@ -20,13 +20,13 @@ class Fit:
             self.fitlabel = eval("functioncollection." + str(self.getAvaiableFits()[fit-1]) + "label")()
 
         if lowerLimit is None:
-            self.lowerLimit = np.min(self.xDatas)
+            self.lowerLimit = 0
             self.xDatas = xDatas
         else:
             self.lowerLimit = lowerLimit
 
         if upperLimit is None:
-            self.upperLimit = np.max(self.xDatas)
+            self.upperLimit = len(self.xDatas)
         else:
             self.upperLimit = upperLimit
 

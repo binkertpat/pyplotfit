@@ -139,9 +139,9 @@ class Plot:
 
     def calculateYAxis(self):
         """scale y-axis according to max y-datas"""
-        self.yAxis["min"] = np.min(self.getyDatas()[self.getxAxis()["min"]:self.getxAxis()["max"]])
-        self.yAxis["max"] = np.max(self.getyDatas()[self.getxAxis()["min"]:self.getxAxis()["max"]]) + (
-                    2 * math.sqrt(np.max(self.getyDatas()[self.getxAxis()["min"]:self.getxAxis()["max"]])))
+        self.yAxis["min"] = np.min(self.getyDatas())
+        self.yAxis["max"] = np.max(self.getyDatas()) + (
+                    2 * math.sqrt(np.max(self.getyDatas())))
 
     def generateAxisDefinition(self):
         """generate new axis-definition"""
