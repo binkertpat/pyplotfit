@@ -5,6 +5,7 @@ from src import functioncollection
 import scipy.optimize as sp
 import inspect
 import copy
+import datasetfunctions
 
 
 class Fit:
@@ -21,14 +22,13 @@ class Fit:
 
         if lowerLimit is None:
             self.lowerLimit = 0
-            self.xDatas = xDatas
         else:
-            self.lowerLimit = lowerLimit
+            self.lowerLimit = datasetfunctions.getArrayIndexForNearestValue(xDatas, lowerLimit)
 
         if upperLimit is None:
-            self.upperLimit = len(self.xDatas)
+            self.upperLimit = datasetfunctions.getArrayIndexForNearestValue(xDatas, np.max(self.xDatas))
         else:
-            self.upperLimit = upperLimit
+            self.upperLimit = datasetfunctions.getArrayIndexForNearestValue(xDatas, upperLimit)
 
         self.xDatas = xDatas[self.lowerLimit: self.upperLimit]
         self.yDatas = yDatas[self.lowerLimit: self.upperLimit]
@@ -99,6 +99,9 @@ class Fit:
         self.calculateFitPlotDatas()
 
     def calculateFitPlotDatas(self):
-        xLine = np.arange(self.getLowerLimit(), self.getUpperLimit(), 0.1)
+        if self.getLowerLimit() == 0:
+            xLine = np.arange(0, np.max(self.getXdatas()), 0.1)
+        else:
+            xLine = np.arange(np.min(self.getXdatas()), np.max(self.getXdatas()), 0.1)
         yLine = self.getFit()(xLine, *self.getPopt())
         self.getPlotObject().plotFit(xLine, yLine, label=self.getFitLabel())
