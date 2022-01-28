@@ -141,7 +141,7 @@ class Plot:
         """scale y-axis according to max y-datas"""
         self.yAxis["min"] = np.min(self.getyDatas()[self.getxAxis()["min"]:self.getxAxis()["max"]])
         self.yAxis["max"] = np.max(self.getyDatas()[self.getxAxis()["min"]:self.getxAxis()["max"]]) + (
-                    1.2 * math.sqrt(np.max(self.getyDatas()[self.getxAxis()["min"]:self.getxAxis()["max"]])))
+                    2 * math.sqrt(np.max(self.getyDatas()[self.getxAxis()["min"]:self.getxAxis()["max"]])))
 
     def generateAxisDefinition(self):
         """generate new axis-definition"""

@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c24c5b7d-d244-47c6-9972-065e59aa5df4" name="Changes" comment="some documentary stuff">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datas/CS.Spe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datas/ba.Spe" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/datas/co.Spe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/pyplotfit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pyplotfit.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/datas/EU152.Spe" beforeDir="false" afterPath="$PROJECT_DIR$/datas/Eu.Spe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/datasetfunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/datasetfunctions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/startplotandfit.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/startplotandfit.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -28,10 +37,13 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="settings.editor.selected.configurable" value="configurable.group.appearance" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/datas" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Patri\OneDrive\Dokumente\GitHub\pyplotfit\datas" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\Patri\OneDrive\Dokumente\GitHub\pyplotfit\datas" />
       <recent name="C:\Users\Patri\OneDrive\Dokumente\GitHub\pyplotfit\src" />

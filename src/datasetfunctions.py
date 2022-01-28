@@ -1,5 +1,4 @@
 import math
-
 import numpy as np
 
 
@@ -15,7 +14,7 @@ def readfile(filename):
                 counter = counter + 1
                 counts.append(int(line.strip()))
             elif i == 9:
-                measuretime = (int(line.split()[0]) + int(line.split()[1])) / 2
+                measuretime = int(line.split()[0])
 
     dataset = {
         'name': filename.split('.')[0],
