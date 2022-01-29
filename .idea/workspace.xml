@@ -4,21 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c24c5b7d-d244-47c6-9972-065e59aa5df4" name="Changes" comment="some documentary stuff">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/co60_firstpeak.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/co60_secondpeak.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/eu_peak5.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/eu_peak5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/eu_peak6.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/eu_peak6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/eu_peak7.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/eu_peak7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/eu_peak8.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/eu_peak8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/eu_peak9.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/eu_peak9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/img/forgottenPeak.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/datasetfunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/datasetfunctions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fit.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/plot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/startplotandfit.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/startplotandfit.py" afterDir="false" />
-    </list>
+    <list default="true" id="c24c5b7d-d244-47c6-9972-065e59aa5df4" name="Changes" comment="praktikum stuff++" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,11 +18,15 @@
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectId" id="24HvjxBJGmL7yH9nNk7pneO2iqS" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
@@ -158,7 +148,21 @@
       <option name="project" value="LOCAL" />
       <updated>1643396368056</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="praktikum stuff++">
+      <created>1643482949167</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1643482949167</updated>
+    </task>
+    <task id="LOCAL-00012" summary="praktikum stuff++">
+      <created>1643483049953</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1643483049953</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -173,13 +177,15 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="readme" />
     <MESSAGE value="workflow2readme" />
     <MESSAGE value="reorganize project structure" />
     <MESSAGE value="todos" />
     <MESSAGE value="update function collection selection" />
     <MESSAGE value="some documentary stuff" />
-    <option name="LAST_COMMIT_MESSAGE" value="some documentary stuff" />
+    <MESSAGE value="praktikum stuff++" />
+    <option name="LAST_COMMIT_MESSAGE" value="praktikum stuff++" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
