@@ -5,11 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c24c5b7d-d244-47c6-9972-065e59aa5df4" name="Changes" comment="some documentary stuff">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pyplotfit.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/pyplotfit.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/co60_firstpeak.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/co60_secondpeak.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/eu_peak5.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/eu_peak5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/eu_peak6.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/eu_peak6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/eu_peak7.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/eu_peak7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/eu_peak8.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/eu_peak8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/eu_peak9.png" beforeDir="false" afterPath="$PROJECT_DIR$/img/eu_peak9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/img/forgottenPeak.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/datasetfunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/datasetfunctions.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/fit.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/functioncollection.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/functioncollection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/plot.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/startplotandfit.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/startplotandfit.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -39,6 +46,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\Patri\OneDrive\Dokumente\GitHub\pyplotfit\img" />
       <recent name="C:\Users\Patri\OneDrive\Dokumente\GitHub\pyplotfit\datas" />
       <recent name="C:\Users\Patri\OneDrive\Dokumente\GitHub\pyplotfit\src" />
     </key>
@@ -136,7 +144,21 @@
       <option name="project" value="LOCAL" />
       <updated>1643307946920</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="some documentary stuff">
+      <created>1643396344215</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1643396344215</updated>
+    </task>
+    <task id="LOCAL-00010" summary="some documentary stuff">
+      <created>1643396368056</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1643396368056</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -158,5 +180,26 @@
     <MESSAGE value="update function collection selection" />
     <MESSAGE value="some documentary stuff" />
     <option name="LAST_COMMIT_MESSAGE" value="some documentary stuff" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/fit.py</url>
+          <line>32</line>
+          <option name="timeStamp" value="7" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/fit.py</url>
+          <line>33</line>
+          <option name="timeStamp" value="8" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/src/plot.py</url>
+          <line>304</line>
+          <option name="timeStamp" value="10" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

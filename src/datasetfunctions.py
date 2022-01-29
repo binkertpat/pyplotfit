@@ -2,7 +2,49 @@ import math
 import numpy as np
 
 
-def readfile(filename):
+def readcvsvwitherrors(filename):
+    x = []
+    y = []
+    xerr = []
+    yerr = []
+    with open("../datas/" + filename, "r") as file:
+        for i, line in enumerate(file):
+            x.append(float(line.split(";")[0].replace(",", ".")))
+            xerr.append(float(line.split(";")[1].replace(",", ".")))
+            y.append(float(line.split(";")[2].replace(",", ".")))
+            yerr.append(float(line.split(";")[3].replace(",", ".")))
+    dataset = {
+        'name': filename.split('.')[0],
+        'x': x,
+        'y': y,
+        'xerr': xerr,
+        'yerr': yerr
+    }
+
+    print("Successfully read the given dataset.")
+
+    return dataset
+
+def readcvsv(filename):
+    x = []
+    y = []
+    with open("../datas/" + filename, "r") as file:
+        for i, line in enumerate(file):
+            x.append(float(line.split(";")[0].replace(",", ".")))
+            y.append(float(line.split(";")[1].replace(",", ".")))
+
+    dataset = {
+        'name': filename.split('.')[0],
+        'x': x,
+        'y': y
+    }
+
+    print("Successfully read the given dataset.")
+
+    return dataset
+
+
+def readSpeFile(filename):
     """read file and return a directory with time, channels and counts"""
     channel = []
     counts = []

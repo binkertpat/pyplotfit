@@ -1,6 +1,7 @@
 import matplotlib.pyplot as mpl
 import matplotlib.patches as mpatches
 import numpy as np
+import datasetfunctions
 import math
 
 
@@ -49,7 +50,10 @@ class Plot:
         if xAxis is None:
             self.xaxis = {"min": np.min(xDatas), "max": np.max(xDatas)}
         else:
-            self.xaxis = {"min": xAxis[0], "max": xAxis[1]}
+            self.xaxis = {
+                "min": xAxis[0],
+                "max": xAxis[1]
+            }
 
         self.yAxis = {"min": 0, "max": 0}
         self.lineType = lineType
@@ -91,7 +95,10 @@ class Plot:
 
     def setxAxis(self, xAxis):
         """set x-axis dimension"""
-        self.xaxis = {"min": xAxis[0], "max": xAxis[1]}
+        self.xaxis = {
+            "min": datasetfunctions.getArrayIndexForNearestValue(self.getxDatas(), xAxis[0]),
+            "max": datasetfunctions.getArrayIndexForNearestValue(self.getxDatas(), xAxis[1])
+        }
 
     def getxAxis(self):
         """get x-axis dimension"""
@@ -139,9 +146,8 @@ class Plot:
 
     def calculateYAxis(self):
         """scale y-axis according to max y-datas"""
-        self.yAxis["min"] = np.min(self.getyDatas())
-        self.yAxis["max"] = np.max(self.getyDatas()) + (
-                    2 * math.sqrt(np.max(self.getyDatas())))
+        self.yAxis["min"] = 0
+        self.yAxis["max"] = np.max(self.getyDatas()[datasetfunctions.getArrayIndexForNearestValue(self.getxDatas(), self.getxAxis()["min"]):datasetfunctions.getArrayIndexForNearestValue(self.getxDatas(), self.getxAxis()["max"])]) * 1.1
 
     def generateAxisDefinition(self):
         """generate new axis-definition"""
@@ -162,7 +168,7 @@ class Plot:
     def showPlot(self):
         """define all plot settings and show the plot"""
         self.definePlot()
-
+        #mpl.yscale('log', base=10)
         mpl.axis(self.generateAxisDefinition())
 
         mpl.legend(loc='best', fancybox=True, shadow=True)
@@ -175,6 +181,7 @@ class Plot:
 
         mpl.xlabel(self.getAxisLabel()["x"])
         mpl.ylabel(self.getAxisLabel()["y"])
+
         mpl.grid(self.getGrid())
         mpl.subplots_adjust(left=0.06, right=0.98, top=0.98, bottom=0.055)
         mpl.show()

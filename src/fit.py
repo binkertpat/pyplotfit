@@ -28,7 +28,7 @@ class Fit:
         if upperLimit is None:
             self.upperLimit = datasetfunctions.getArrayIndexForNearestValue(xDatas, np.max(self.xDatas))
         else:
-            self.upperLimit = datasetfunctions.getArrayIndexForNearestValue(xDatas, upperLimit)
+            self.upperLimit = datasetfunctions.getArrayIndexForNearestValue(xDatas, upperLimit)+1
 
         self.xDatas = xDatas[self.lowerLimit: self.upperLimit]
         self.yDatas = yDatas[self.lowerLimit: self.upperLimit]
