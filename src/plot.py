@@ -27,15 +27,19 @@ class Plot:
         show grid true/false
     extraLegendComponent: str
         set an extra entry to the legend
+    logplot: int
+        set logplot by setting base
     """
 
     def __init__(self, xDatas, yDatas, dataLabel=None, axisLabel=None, xAxis=None, lineType="--", lineColor="blue",
-                 grid=True, extraLegendComponent=None):
+                 grid=True, extraLegendComponent=None, logplot=None):
 
         self.fity = None
         self.fitx = None
         self.xDatas = xDatas
         self.yDatas = yDatas
+
+        self.logPlot = logplot
 
         if dataLabel is None:
             self.dataLabel = "Dataset"
@@ -136,6 +140,14 @@ class Plot:
         """get grid setting"""
         return self.grid
 
+    def setLogPlot(self, logplot):
+        """set logplot by setting base"""
+        self.logPlot = logplot
+
+    def getLogPlot(self):
+        """get logplot base"""
+        return self.logPlot
+
     def setExtraLegendComponent(self, extraLegendComponent):
         """set an extra legend component"""
         self.extraLegendComponent = extraLegendComponent
@@ -168,7 +180,10 @@ class Plot:
     def showPlot(self):
         """define all plot settings and show the plot"""
         self.definePlot()
-        #mpl.yscale('log', base=10)
+
+        if self.getLogPlot() is not None:
+            mpl.yscale('log', base=self.getLogPlot())
+
         mpl.axis(self.generateAxisDefinition())
 
         mpl.legend(loc='best', fancybox=True, shadow=True)
