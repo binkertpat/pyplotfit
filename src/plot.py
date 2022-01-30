@@ -1,8 +1,7 @@
 import matplotlib.pyplot as mpl
 import matplotlib.patches as mpatches
 import numpy as np
-import datasetfunctions
-import math
+import src.datasetfunctions as datasetfunctions
 
 
 class Plot:

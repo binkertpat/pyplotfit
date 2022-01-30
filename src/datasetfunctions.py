@@ -7,7 +7,7 @@ def readcvsvwitherrors(filename):
     y = []
     xerr = []
     yerr = []
-    with open("../datas/" + filename, "r") as file:
+    with open("./datas/" + filename, "r") as file:
         for i, line in enumerate(file):
             x.append(float(line.split(";")[0].replace(",", ".")))
             xerr.append(float(line.split(";")[1].replace(",", ".")))
@@ -28,7 +28,7 @@ def readcvsvwitherrors(filename):
 def readcvsv(filename):
     x = []
     y = []
-    with open("../datas/" + filename, "r") as file:
+    with open("./datas/" + filename, "r") as file:
         for i, line in enumerate(file):
             x.append(float(line.split(";")[0].replace(",", ".")))
             y.append(float(line.split(";")[1].replace(",", ".")))
@@ -49,7 +49,7 @@ def readSpeFile(filename):
     channel = []
     counts = []
     counter = 0
-    with open("../datas/" + filename, "r") as file:
+    with open("./datas/" + filename, "r") as file:
         for i, line in enumerate(file):
             if 12 <= i <= 8202:
                 channel.append(counter)

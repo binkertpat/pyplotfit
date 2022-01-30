@@ -4,13 +4,26 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c24c5b7d-d244-47c6-9972-065e59aa5df4" name="Changes" comment="added log plot option">
+    <list default="true" id="c24c5b7d-d244-47c6-9972-065e59aa5df4" name="Changes" comment="change find index for nearest array entry">
+      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/datasetfunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/datasetfunctions.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/fit.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fit.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/functioncollection.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/functioncollection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/plot.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/startplotandfit.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,7 +56,28 @@
       <recent name="C:\Users\Patri\OneDrive\Dokumente\GitHub\pyplotfit\src" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Python.main">
+    <configuration name="main" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pyplotfit" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/main.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="startplotandfit" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
       <module name="pyplotfit" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -67,6 +101,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.main" />
         <item itemvalue="Python.startplotandfit" />
       </list>
     </recent_temporary>
@@ -178,7 +213,21 @@
       <option name="project" value="LOCAL" />
       <updated>1643541243227</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="change find index for nearest array entry">
+      <created>1643541431713</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1643541431713</updated>
+    </task>
+    <task id="LOCAL-00016" summary="change find index for nearest array entry">
+      <created>1643541633597</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1643541633597</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -202,24 +251,25 @@
     <MESSAGE value="some documentary stuff" />
     <MESSAGE value="praktikum stuff++" />
     <MESSAGE value="added log plot option" />
-    <option name="LAST_COMMIT_MESSAGE" value="added log plot option" />
+    <MESSAGE value="change find index for nearest array entry" />
+    <option name="LAST_COMMIT_MESSAGE" value="change find index for nearest array entry" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/fit.py</url>
-          <line>32</line>
+          <line>29</line>
           <option name="timeStamp" value="7" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/fit.py</url>
-          <line>33</line>
+          <line>30</line>
           <option name="timeStamp" value="8" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/plot.py</url>
-          <line>319</line>
+          <line>318</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>

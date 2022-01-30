@@ -1,11 +1,8 @@
-import math
-
 import numpy as np
-from src import functioncollection
+import src.functioncollection as functioncollection
 import scipy.optimize as sp
 import inspect
-import copy
-import datasetfunctions
+import src.datasetfunctions as datasetfunctions
 
 
 class Fit:
