@@ -129,6 +129,7 @@ def fromnewscaletochannels(value, params):
 
 
 def getArrayIndexForNearestValue(array, value):
-    arr = np.array(array)
-    return np.abs(arr - value).argmin()
+    idx, val = min(enumerate(array), key=lambda x: abs(x[1] - value))
+    return idx
+
 

@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c24c5b7d-d244-47c6-9972-065e59aa5df4" name="Changes" comment="praktikum stuff++">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/startplotandfit.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/startplotandfit.py" afterDir="false" />
+    <list default="true" id="c24c5b7d-d244-47c6-9972-065e59aa5df4" name="Changes" comment="added log plot option">
+      <change beforePath="$PROJECT_DIR$/src/datasetfunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/datasetfunctions.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -172,7 +171,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643483917195</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="added log plot option">
+      <created>1643541243227</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1643541243227</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -195,7 +201,8 @@
     <MESSAGE value="update function collection selection" />
     <MESSAGE value="some documentary stuff" />
     <MESSAGE value="praktikum stuff++" />
-    <option name="LAST_COMMIT_MESSAGE" value="praktikum stuff++" />
+    <MESSAGE value="added log plot option" />
+    <option name="LAST_COMMIT_MESSAGE" value="added log plot option" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -212,7 +219,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/plot.py</url>
-          <line>304</line>
+          <line>319</line>
           <option name="timeStamp" value="10" />
         </line-breakpoint>
       </breakpoints>
