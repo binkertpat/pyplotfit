@@ -5,11 +5,11 @@ if __name__ == '__main__':
     #dataset = datasetfunctions.readcvsv("energiekalibrierung.csv")
     #Y, X = dataset["x"], dataset["y"]
 
-    dataset = datasetfunctions.readcvsvwitherrors("vaev.csv")
-    X, Xerr, Y, Yerr = dataset["x"], dataset["xerr"], dataset["y"], dataset["yerr"]
+    #dataset = datasetfunctions.readcvsvwitherrors("vaev.csv")
+    #X, Xerr, Y, Yerr = dataset["x"], dataset["xerr"], dataset["y"], dataset["yerr"]
 
-    #dataset = datasetfunctions.readSpeFile("cs.Spe")
-    #X, Y = dataset["channel"], dataset["counts"]
+    dataset = datasetfunctions.readSpeFile("Sichel-Tanne.Spe")
+    X, Y = dataset["channel"], dataset["counts"]
 
     # VAEV-Koff
     #X = [80.9979, 121.7817, 244.6974, 276.3989, 302.8508, 344.2785, 356.0129, 383.8485, 411.1165, 443.9606, 661.657,
@@ -19,16 +19,17 @@ if __name__ == '__main__':
          #1.15604780017171, 1.0364414897928, 0.981117207247956, 0.998035457651571, 0.681009397042416, 0.598057076329598,
          #0.22931568296954, 0.442622400126309, 0.448547102149797, 0.400079023798581, 0.364293297821452]
 
-    #X = datasetfunctions.calibrate_dataSets(X, [0.39, 18.62])
+    X = datasetfunctions.calibrate_dataSets(X, [0.39, 18.62])
 
-    #yerr = datasetfunctions.calculatestatisticalerrors(Y)
+    yerr = datasetfunctions.calculatestatisticalerrors(Y)
 
 
-    plot = plot.Errorbar(X, Y, xAxis=[0, 1400], axisLabel=["Energie E [keV]", "VAEV [%]"], ecolor="grey", xerr=Xerr, yerr=Yerr)
+    #[590, 620 ... 650, 680 ... 780, 800 ... 1430 1445 ... 2549.2569]
+    plot = plot.Errorbar(X, Y, xAxis=[2555, 2570], axisLabel=["Energie E [keV]", "Ereignisse N"], ecolor="grey", yerr=yerr, extraLegendComponent="Messzeit: "+str(dataset["time"])+"s")
     #plot = plot.Errorbar(X, Y, xAxis=[0, 800], axisLabel=["Kanal", "Energie E"], ecolor="grey", yerr=yerr)
-    plot.setDataLabel("VAEV")
-    #GaussFit = fit.Fit(plot, X, Y, 3, initialGuesses=[12000, 660, 7, 1, 1], lowerLimit=650, upperLimit=675)
-    # doubleGaussFit = fit.Fit(plot, X, Y, 1, initialGuesses=[25000, 98, 7, 7000, 110, 7, 1, 1], lowerLimit=85, upperLimit=120)
+    plot.setDataLabel("Sichel-Tanne")
+    GaussFit = fit.Fit(plot, X, Y, 3, initialGuesses=[12, 2562, 4, 1, 1], lowerLimit=2555, upperLimit=2570)
+    #doubleGaussFit = fit.Fit(plot, X, Y, 1, initialGuesses=[55, 605, 7, 28, 608, 2, 1, 1], lowerLimit=85, upperLimit=120)
     #linFit = fit.Fit(plot, X, Y, 4, initialGuesses=[1, 1], lowerLimit=0, upperLimit=1408)
-    expfit = fit.Fit(plot, X, Y, 2, lowerLimit=0, upperLimit=20000, initialGuesses=[1, 1])
+    #expfit = fit.Fit(plot, X, Y, 2, lowerLimit=0, upperLimit=20000, initialGuesses=[1, 1])
     plot.showPlot()
