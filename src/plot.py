@@ -157,8 +157,8 @@ class Plot:
 
     def calculateYAxis(self):
         """scale y-axis according to max y-datas"""
-        self.yAxis["min"] = np.min(self.getyDatas()[datasetfunctions.getArrayIndexForNearestValue(self.getxDatas(), self.getxAxis()["min"]):datasetfunctions.getArrayIndexForNearestValue(self.getxDatas(), self.getxAxis()["max"])])
-        self.yAxis["max"] = np.max(self.getyDatas()[datasetfunctions.getArrayIndexForNearestValue(self.getxDatas(), self.getxAxis()["min"]):datasetfunctions.getArrayIndexForNearestValue(self.getxDatas(), self.getxAxis()["max"])]) * 1.1
+        self.yAxis["min"] = 0
+        self.yAxis["max"] = 1500
 
     def generateAxisDefinition(self):
         """generate new axis-definition"""

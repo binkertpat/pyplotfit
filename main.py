@@ -4,6 +4,9 @@ import src.plot as plot
 
 if __name__ == '__main__':
 
+    #dataset = dsf.readcvsv("energiekalibrierung.CSV")
+    #Y, X = dataset["x"], dataset["y"]
+
     # read your file and set x and y
     dataset = dsf.readSpeFile("Sichel-Tanne.Spe")
     X, Y = dataset["channel"], dataset["counts"]
@@ -13,12 +16,11 @@ if __name__ == '__main__':
     yerr = dsf.calculatestatisticalerrors(Y)
 
     # create plot object
-    plot = plot.Errorbar(X, Y, xAxis=[2555, 2570], axisLabel=["Energie E [keV]", "Ereignisse N"], ecolor="grey",
-                         yerr=yerr, extraLegendComponent="Messzeit: "+str(dataset["time"])+"s")
-    plot.setDataLabel("Sichel-Tanne")
+    plot = plot.Errorbar(X, Y, xAxis=[625, 700], axisLabel=["Ereignisse N", "Energie E [keV]"], ecolor="grey")
+    plot.setDataLabel("Energiekalibrierung")
 
     # create fit object
-    GaussFit = fit.Fit(plot, X, Y, 3, initialGuesses=[12, 2562, 4, 1, 1], lowerLimit=2556, upperLimit=2568)
+    GaussFit = fit.Fit(plot, X, Y, 3, upperLimit=670, lowerLimit=650, initialGuesses=[1000, 660, 1, 1, 1])
 
     # show everything you done
     plot.showPlot()

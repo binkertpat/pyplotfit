@@ -4,14 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="c24c5b7d-d244-47c6-9972-065e59aa5df4" name="Changes" comment="change find index for nearest array entry">
-      <change afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
+    <list default="true" id="c24c5b7d-d244-47c6-9972-065e59aa5df4" name="Changes" comment="finalize praktikum">
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_01_2022_19_45_[Changes]/shelved.patch" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/shelf/Uncommitted_changes_before_Update_at_28_01_2022_19_45__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/datasetfunctions.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/datasetfunctions.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/fit.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/fit.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/functioncollection.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/functioncollection.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/main.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/plot.py" beforeDir="false" afterPath="$PROJECT_DIR$/src/plot.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/startplotandfit.py" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1643541633597</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="finalize praktikum">
+      <created>1643545676419</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1643545676419</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -252,21 +258,12 @@
     <MESSAGE value="praktikum stuff++" />
     <MESSAGE value="added log plot option" />
     <MESSAGE value="change find index for nearest array entry" />
-    <option name="LAST_COMMIT_MESSAGE" value="change find index for nearest array entry" />
+    <MESSAGE value="finalize praktikum" />
+    <option name="LAST_COMMIT_MESSAGE" value="finalize praktikum" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/fit.py</url>
-          <line>29</line>
-          <option name="timeStamp" value="7" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
-          <url>file://$PROJECT_DIR$/src/fit.py</url>
-          <line>30</line>
-          <option name="timeStamp" value="8" />
-        </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/src/plot.py</url>
           <line>318</line>

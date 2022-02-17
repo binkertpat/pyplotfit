@@ -77,8 +77,54 @@ Errorbar(
 ```
 ### add fits
 
+If you want, you can add fits to an specific area. Therefore you create an <code>fit()</code> object.
+```python
+GaussFit = fit.Fit(plot, X, Y, 3, upperLimit=670, lowerLimit=650, initialGuesses=[1000, 660, 1, 1, 1])
+```
+Required Arguments are the plot object, the x- and y-datas and the fit index. All avaible fits will be printed in the console with the current index.
+```python
+List of all key numbers of available fits:
+1: doublegaussianwithlinearunderground
+2: exp
+3: gaussianwithlinearunderground
+4: linear
+```
+Not required arguments are upper- and lower limits for the fit area and the initial guesses. But maybe the fit wont show if you dont set them.
 
+# Example
+```python
+import src.datasetfunctions as dsf
+import src.fit as fit
+import src.plot as plot
 
-## open TODOs  
-- Update functioncollection for more fit functions  
-- function for find index in sorted array for nearest given value  
+if __name__ == '__main__':
+
+    # read your file and set x and y
+    dataset = dsf.readSpeFile("Sichel-Tanne.Spe")
+    X, Y = dataset["channel"], dataset["counts"]
+
+    # change scale and calculate statistical error
+    X = dsf.calibrate_dataSets(X, [0.39, 18.62])
+    yerr = dsf.calculatestatisticalerrors(Y)
+
+    # create plot object
+    plot = plot.Errorbar(X, Y, xAxis=[625, 700], axisLabel=["Ereignisse N", "Energie E [keV]"], ecolor="grey")
+    plot.setDataLabel("Energiekalibrierung")
+
+    # create fit object
+    GaussFit = fit.Fit(plot, X, Y, 3, upperLimit=670, lowerLimit=650, initialGuesses=[1000, 660, 1, 1, 1])
+
+    # show everything you done
+    plot.showPlot()
+```
+![exampleFit](img/examplefit.png)
+Console output:
+```python
+Calculated fit-params:
+        c1  =  1012.3287915580813 with standard deviation +/- 8.20387656143891
+        mu1  =  661.0887096784303 with standard deviation +/- 0.011160440691047291
+        sigma1  =  1.2134294338415335 with standard deviation +/- 0.011929200090804748
+        a  =  -0.2220767579949974 with standard deviation +/- 0.3694342003581278
+        b  =  155.6003162319009 with standard deviation +/- 243.63893229660619
+```
+
